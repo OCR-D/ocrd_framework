@@ -17,9 +17,9 @@ More than 8GB RAM and 20 GB of hard disc.
 ### Installation
 Choose a directory on a disc with at least 10 GB free space left.
 (In our example we use ocrd_framework inside the home directory)
-Start [installation script](install_OCR-D_framework.sh).
+Download and start [installation script](install_OCR-D_framework.sh).
 ```bash=bash
-user@localhost:/home/user/$install_OCR-D_framework.sh /home/user/ocrd_framework
+user@localhost:/home/user/$bash install_OCR-D_framework.sh /home/user/ocrd_framework
 [...]
 SUCCESS
 Now you can start an OCR-D workflow with the following commands:
