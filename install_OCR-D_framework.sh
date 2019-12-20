@@ -55,7 +55,7 @@ cd $TMP_DIR
 wget https://github.com/OCR-D/repository_metastore/archive/master.zip
 unzip master.zip
 rm master.zip
-cd repository_metastore-master/installDocker/repository
+cd repository_metastore-master/installDocker
 
 
 bash installRepo.sh "$INSTALLATION_DIRECTORY"/$REPO_DIR
@@ -68,17 +68,13 @@ cd "$INSTALLATION_DIRECTORY"/$TMP_DIR
 wget https://raw.githubusercontent.com/OCR-D/taverna_workflow/master/Dockerfile
 docker build -t ocrd/taverna .
 cd "$INSTALLATION_DIRECTORY"/$TAVERNA_DIR
-docker run -v 'pwd':/data ocrd/taverna init
+docker run -v `pwd`:/data ocrd/taverna init
 
 
-cd "$INSTALLATION_DIRECTORY"
+cd "$INSTALLATION_DIRECTORY/$TAVERNA_DIR"
 
 
 echo SUCCESS
 echo Now you can start an OCR-D workflow with the following commands:
 echo "cd \"$INSTALLATION_DIRECTORY/$TAVERNA_DIR\""
 echo "docker run --network=\"host\" -v `pwd`:/data ocrd/taverna process"
-
-
-
-
