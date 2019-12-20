@@ -6,9 +6,9 @@ Installation of OCR-D framework containing all available processors, taverna wor
 More than 8GB RAM and 20 GB of hard disc.
 
 ### Requirements
-- Docker
+- Docker (see installation for [Ubuntu](https://github.com/OCR-D/repository_metastore/blob/master/installDocker/installationDocker.md))
   - docker
-  - docker-compose
+  - docker-compose 
 - git
 - sed
 - unzip
@@ -156,4 +156,3 @@ user@localhost:~/ocrd_framework/taverna$docker run --network="host" -v 'pwd':/da
 ## More Information
 
 * [Docker](https://www.docker.com/)
-
