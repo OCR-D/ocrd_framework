@@ -39,7 +39,7 @@ user@localhost:/home/user/$ echo '127.0.0.1   kitdm20' | sudo tee -a /etc/hosts
 ### First Test
 To check if the installation works fine you can start a first test.
 ```bash=bash
-user@localhost:~/ocrd_framework/taverna$docker run --network="host" -v 'pwd':/data ocrd/taverna testWorkflow
+user@localhost:~/ocrd_framework/taverna$docker run --network="host" -v `pwd`:/data ocrd/taverna testWorkflow
 [...]
 Outputs will be saved to the directory: /taverna/git/Execute_OCR_D_workfl_output
 # The processed workspace should look like this:
@@ -80,7 +80,7 @@ The commands should look like this:
 For a fast test if a processor is available try the following command:
 ```bash=bash
 # Test if processor is installed e.g. ocrd-cis-ocropy-binarize
-user@localhost:~/ocrd_framework/taverna$docker run -v 'pwd':/data ocrd/taverna dump ocrd-cis-ocropy-binarize
+user@localhost:~/ocrd_framework/taverna$docker run -v `pwd`:/data ocrd/taverna dump ocrd-cis-ocropy-binarize
 {
  "executable": "ocrd-cis-ocropy-binarize",
  "categories": [
@@ -148,7 +148,7 @@ user@localhost:~/ocrd_framework/taverna$
 ### Execute your own Workflow
 If workflow is configured it can be started.
 ```bash=bash
-user@localhost:~/ocrd_framework/taverna$docker run --network="host" -v 'pwd':/data ocrd/taverna process my_parameters.txt relative/path/to/workspace/containing/mets
+user@localhost:~/ocrd_framework/taverna$docker run --network="host" -v `pwd`:/data ocrd/taverna process my_parameters.txt relative/path/to/workspace/containing/mets
 ```
 
 
